@@ -6,17 +6,16 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.myapplication.Model.Event;
 import com.example.timeapp.Dao.EntryDao;
 import com.example.timeapp.Dao.UserDao;
 import com.example.timeapp.models.Entry;
 import com.example.timeapp.models.Users;
 
-@Database(entities = {Users.class, Entry.class}, version = 1)
+@Database(entities = {Event.class}, version = 1)
 public abstract class RoomConnection extends RoomDatabase {
 
     private static RoomConnection INSTANCE;
-
-    public abstract UserDao userDao();
 
     public abstract EntryDao entryDao();
 

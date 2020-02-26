@@ -12,15 +12,21 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.myapplication.ui.gallery.LlistatFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_llistat" />
+        android:id="@+id/nav_llistat"
+        android:name="com.example.myapplication.ui.share.LlistaFragment"
+        android:label="Llistat d'esdeveniments"
+        tools:layout="@layout/fragment_asistir" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_esdeveniment"
         android:name="com.example.myapplication.ui.slideshow.EsdevenimentFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_esdeveniment" />
+        tools:layout="@layout/fragment_event_edit" />
+
+    <fragment
+        android:id="@+id/nav_llistatdetall"
+        android:name="com.example.myapplication.ui.llistat.DetallFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_event_detail" />
 
 </navigation>

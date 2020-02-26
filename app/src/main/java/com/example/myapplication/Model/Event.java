@@ -3,22 +3,21 @@ package com.example.myapplication.Model;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-
-import com.example.timeapp.Database.DBDesign;
+import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
-import java.util.Date;
 
 @Entity(tableName = "EventDetail")
 public class Event implements Serializable {
 
+    @PrimaryKey
     @NonNull
     @ColumnInfo(name = "Title")
     private String title;
 
     @NonNull
-    @ColumnInfo(name = "EvDate")
-    private Date evDate;
+    @ColumnInfo(name = "Fecha")
+    private String fecha;
 
     @NonNull
     @ColumnInfo(name = "Place")
@@ -44,9 +43,9 @@ public class Event implements Serializable {
     @ColumnInfo(name = "Description")
     private String description;
 
-    public Event(@NonNull String title, @NonNull Date evDate, @NonNull String place, @NonNull String email, @NonNull String room, int price, int people, @NonNull String description){
+    public Event(@NonNull String title, @NonNull String fecha, @NonNull String place, @NonNull String email, @NonNull String room, int price, int people, @NonNull String description){
         this.title = title;
-        this.evDate = evDate;
+        this.fecha = fecha;
         this.place = place;
         this.email = email;
         this.room = room;
@@ -63,15 +62,6 @@ public class Event implements Serializable {
 
     public void setTitle(@NonNull String title) {
         this.title = title;
-    }
-
-    @NonNull
-    public Date getEvDate() {
-        return evDate;
-    }
-
-    public void setEvDate(@NonNull Date evDate) {
-        this.evDate = evDate;
     }
 
     @NonNull
@@ -124,5 +114,14 @@ public class Event implements Serializable {
 
     public void setDescription(@NonNull String description) {
         this.description = description;
+    }
+
+    @NonNull
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(@NonNull String fecha) {
+        this.fecha = fecha;
     }
 }
